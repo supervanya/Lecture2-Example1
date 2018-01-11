@@ -15,8 +15,8 @@ def form1():
   <input type="submit" value="Submit">
 </form>"""
 
-@app.route('/result')
-def result_form1(methods=["GET"]):
+@app.route('/result',methods=["GET"])
+def result_form1():
     if request.method == "GET":
         print(request.args) # Check out your Terminal window where you're running this...
         result_str = ""
@@ -32,8 +32,8 @@ def form2():
     <input type="submit" value="Submit">
     """
 
-@app.route('/letter')
-def letters_result(methods=["GET"]):
+@app.route('/letter',methods=["GET"])
+def letters_result():
     if request.method == "GET":
         phrase = request.args.get('phrase','')
         total_number = 0
