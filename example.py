@@ -30,6 +30,7 @@ def form2():
     return """<form action="http://localhost:5000/letter" method='GET'>
     <input type="text" name="phrase"><br>
     <input type="submit" value="Submit">
+    </form>
     """
 
 @app.route('/letter',methods=["GET"])
@@ -46,4 +47,4 @@ def letters_result():
 
 
 if __name__ == "__main__":
-    app.run(use_reloader=True, debug=True) # Nice trick -- see details in lecture notes
+    app.run(debug=True) # Nice trick -- see details in lecture notes
